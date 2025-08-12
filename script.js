@@ -7,6 +7,50 @@ $(document).ready(function() {
   var expandThreshold = isMobile ? 300 : 500;
   var expandHeight = isMobile ? '400px' : '500px';
   var translateY = isMobile ? '350px' : '450px';
+  var confettiShown = false;
+  
+  // Función para lanzar confeti
+  function lanzarConfeti() {
+    if (!confettiShown) {
+      confettiShown = true;
+      
+      var count = 200;
+      var defaults = {
+        origin: { y: 0.7 }
+      };
+
+      function fire(particleRatio, opts) {
+        confetti({
+          ...defaults,
+          ...opts,
+          particleCount: Math.floor(count * particleRatio)
+        });
+      }
+
+      fire(0.25, {
+        spread: 26,
+        startVelocity: 55,
+      });
+      fire(0.2, {
+        spread: 60,
+      });
+      fire(0.35, {
+        spread: 100,
+        decay: 0.91,
+        scalar: 0.8
+      });
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 25,
+        decay: 0.92,
+        scalar: 1.2
+      });
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 45,
+      });
+    }
+  }
   
   $(window).scroll(function () {   
     var scr = $(window).scrollTop(),
@@ -27,6 +71,9 @@ $(document).ready(function() {
         'transform':'rotateX(180deg)',
         'z-index': '0'
       });
+      
+      // Lanzar confeti después de que la carta se abra
+      setTimeout(lanzarConfeti, 1000);
     }
     // cerrado y giro
     else if (scr <= scrollThreshold) {
@@ -39,6 +86,7 @@ $(document).ready(function() {
         'transform':'rotateX(0deg)',
         'z-index': '10'
       });  
+      confettiShown = false;
     }
     // Sobre trasladoY / carta
     if (scr >= expandThreshold) {
@@ -71,6 +119,14 @@ $(document).ready(function() {
       });
     }
   });
+  
+  // Animación del pastel
+  $('.pastel').css({
+    'animation': 'bounce 2s infinite alternate'
+  });
+  
+  // Añadir animación de rebote para el pastel
+  $('<style>').text('@keyframes bounce { 0% { transform: translateX(-50%) translateY(0); } 100% { transform: translateX(-50%) translateY(-10px); } }').appendTo('head');
   
   // Forzar un pequeño scroll al cargar para asegurar que la animación funcione en iPhone
   if(isMobile) {

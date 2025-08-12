@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Carta  de amor online</title>
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 <div id="perspectiva">
         <div id="contenedor">
             <div class="cara frontal">
                 <h1>Para: Monica Alejrandra Gomez Olvera<br><span>Desliza hacia abajo corazón</span></h1>
+                <div class="pastel">
+                    <div class="pastel-base"></div>
+                    <div class="pastel-medio"></div>
+                    <div class="pastel-top"></div>
+                    <div class="vela"></div>
+                    <div class="llama"></div>
+                </div>
             </div>
             <div class="cara trasera">
                 <div id="abrir"></div>
@@ -33,12 +40,14 @@
                 <div class="carta-imagen">
                     <img src="./IMG_2914 (1).jpg" alt="" width="200px">
                 </div>
+                <div id="confetti-container"></div>
             </div>
         </div>
 </div>
 <div id="wrapper"></div>
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script><script  src="./script.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+<script src="./script.js"></script>
 
 </body>
 </html>
