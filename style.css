@@ -3,10 +3,13 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body{
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body{
@@ -23,16 +26,16 @@ body{
 
 #perspectiva{
 	position:fixed;
-	top:200px;
+	top:150px;
 	left:50%;
-	margin-left: -200px;
+	margin-left: -150px;
 	perspective:1000;
 }
 
 #contenedor{
 	box-shadow: 0px 2px 10px hsla(0,0%,10%,1);
-	width: 400px;
-	height: 280px;
+	width: 300px;
+	height: 210px;
 	transform-style: preserve-3d;
 }
 
@@ -127,7 +130,7 @@ body{
 	top:3px;
 	left:0;
 	margin: 0 0 0 5px;
-	width: 390px;
+	width: 290px;
 	height: 200px;
 	overflow: hidden;
 	z-index: 1;
@@ -167,4 +170,76 @@ body{
 	float: left;
 	line-height:1.2em;
 	padding:10px 10px 0 0;
+}
+
+.carta-imagen {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+
+.carta-imagen img {
+	max-width: 150px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Media queries para dispositivos móviles */
+@media only screen and (max-width: 480px) {
+	#perspectiva {
+		top: 100px;
+		margin-left: -140px;
+	}
+	
+	#contenedor {
+		width: 280px;
+		height: 200px;
+	}
+	
+	#carta {
+		width: 270px;
+		height: 200px;
+	}
+	
+	#carta p {
+		margin: 20px 30px 0 30px;
+		font-size: 0.8em;
+	}
+	
+	.carta-imagen img {
+		max-width: 120px;
+	}
+	
+	#abrir {
+		border-top: 150px solid hsla(0,0%,85%,1);
+		border-left: 140px solid transparent;
+		border-right: 140px solid transparent;
+	}
+	
+	#partes {
+		border-left: 180px solid hsla(0,0%,90%,1);
+		border-top: 120px solid transparent;
+		border-bottom: 120px solid transparent;
+	}
+	
+	#partes:after {
+		bottom: -120px;
+		left: -180px;
+		border-bottom: 150px solid hsla(0,0%,95%,1);
+		border-left: 140px solid transparent;
+		border-right: 140px solid transparent;
+	}
+	
+	#partes:before {
+		top: -120px;
+		right: -180px;
+		border-right: 180px solid hsla(0,0%,90%,1);
+		border-top: 120px solid transparent;
+		border-bottom: 120px solid transparent;
+	}
 }
