@@ -55,7 +55,7 @@ body{
 	text-shadow: 0px 1px 1px hsla(0,0%,100%,1);
 	font-size: 1em;
 	text-align: center;
-	margin-top: 110px;
+	margin-top: 60px;
 }
 
 .frontal h1 span{
@@ -129,7 +129,7 @@ body{
 	margin: 0 0 0 5px;
 	width: 390px;
 	height: 200px;
-	overflow: hidden;
+	overflow: auto;
 	z-index: 1;
 }
 
@@ -170,15 +170,12 @@ body{
 }
 
 .carta-imagen {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 2;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .carta-imagen img {
@@ -196,6 +193,25 @@ body{
 	transform: translateX(-50%);
 	width: 100px;
 	height: 100px;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 480px) {
+	#carta {
+		width: 90%;
+		height: 180px;
+		margin: 0 auto;
+		left: 5%;
+	}
+	
+	#carta p {
+		margin: 15px 20px;
+		font-size: 0.8em;
+	}
+	
+	.carta-imagen img {
+		max-width: 120px;
+	}
 }
 
 .pastel-base {
