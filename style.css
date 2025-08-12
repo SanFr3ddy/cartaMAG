@@ -55,7 +55,9 @@ body{
 	text-shadow: 0px 1px 1px hsla(0,0%,100%,1);
 	font-size: 1em;
 	text-align: center;
-	margin-top: 60px;
+	margin-top: 20px;
+	position: relative;
+	z-index: 30;
 }
 
 .frontal h1 span{
@@ -129,8 +131,10 @@ body{
 	margin: 0 0 0 5px;
 	width: 390px;
 	height: 200px;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	z-index: 1;
+	padding-bottom: 10px;
 }
 
 #carta hgroup{
@@ -193,24 +197,38 @@ body{
 	transform: translateX(-50%);
 	width: 100px;
 	height: 100px;
+	z-index: 20;
 }
 
 /* Media queries para dispositivos móviles */
 @media (max-width: 480px) {
+	#perspectiva {
+		top: 150px;
+	}
+
 	#carta {
-		width: 90%;
-		height: 180px;
+		width: 85%;
+		height: 250px;
 		margin: 0 auto;
-		left: 5%;
+		left: 7.5%;
 	}
 	
 	#carta p {
-		margin: 15px 20px;
-		font-size: 0.8em;
+		margin: 10px 15px;
+		font-size: 0.75em;
 	}
 	
+	.carta-imagen {
+		margin-top: 10px;
+	}
+
 	.carta-imagen img {
-		max-width: 120px;
+		max-width: 100px;
+	}
+
+	.frontal h1 {
+		font-size: 0.9em;
+		margin-top: 15px;
 	}
 }
 
