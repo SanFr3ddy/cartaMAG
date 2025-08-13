@@ -51,7 +51,7 @@ body{
 }
 
 .frontal h1{
-	color: hsla(0,0%,20%,1);
+	color: rgb(0, 0, 0);
 	text-shadow: 0px 1px 1px hsla(0,0%,100%,1);
 	font-size: 1em;
 	text-align: center;
@@ -126,15 +126,16 @@ body{
 	box-shadow: 0px 2px 5px hsla(0,0%,10%,1);
 	border-radius: 5px;
 	position: absolute;
-	top:3px;
-	left:0;
+	top: 50px;
+	left: 0;
 	margin: 0 0 0 5px;
 	width: 390px;
-	height: 200px;
-	overflow-y: auto;
+	min-height: 300px;
+	height: auto;		
+	overflow-y: visible;
 	overflow-x: hidden;
 	z-index: 1;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 #carta hgroup{
@@ -157,19 +158,67 @@ body{
 }
 
 #carta p{
-	color: rgb(0, 0, 0);
-	text-shadow: 0px 1px 1px rgb(0, 0, 0);
-	font-size: 0.99em;
-	line-height:1.45em;
-	margin: 30px 50px 0 50px;
+	color: #000000;
+	font-weight: 500;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 25px 40px 0 40px;
+	text-align: justify;
 }
 
 #carta p:first-letter{
-	color: hsla(0,63%,57%,1);
-	text-shadow: 0px 1px 1px rgb(255, 0, 0);
-	font-size: 0.85em;
+	color: #ff0000;
+	font-size: 2.5em;
 	float: left;
-	line-height:1.45em;
+	line-height: 1.2em;
+	padding: 5px 8px 0 0;
+	font-weight: bold;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 480px) {
+	#perspectiva {
+		top: 100px;
+		left: 50%;
+		margin-left: -200px;
+	}
+
+	#carta {
+		width: 85%;
+		height: auto;
+		min-height: 280px;
+		margin: 0 auto;
+		left: 7.5%;
+		padding: 15px;
+		top: 10px;
+	}
+	
+	#carta p {
+		margin: 15px 20px;
+		font-size: 0.9em;
+		color: #000000;
+		font-weight: 500;
+		text-align: justify;
+	}
+	
+	#carta p:first-letter{
+		color: #ff0000;
+		font-size: 2.2em;
+		font-weight: bold;
+	}
+	
+	.carta-imagen {
+		margin-top: 15px;
+	}
+
+	.carta-imagen img {
+		max-width: 180px;
+	}
+
+	.frontal h1 {
+		font-size: 0.85em;
+		margin-top: 10px;
+	}
 }
 
 .carta-imagen {
@@ -260,7 +309,7 @@ body{
 	transform: translateX(-50%);
 	width: 60px;
 	height: 20px;
-	background: #ffbed8;
+	background: #ff0066;
 	border-radius: 6px 6px 3px 3px;
 }
 
@@ -308,3 +357,2060 @@ body{
 	pointer-events: none;
 	z-index: 1000;
 }
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 20px;
+	background: #ff0066;
+	border-radius: 6px 6px 3px 3px;
+}
+
+.vela {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 20px;
+	background: #fff;
+	border-radius: 2px;
+}
+
+.llama {
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 15px;
+	background: #ffcc00;
+	border-radius: 50% 50% 20% 20%;
+	box-shadow: 0 0 10px #ff9900, 0 0 20px #ff6600;
+	animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-50%) scale(1.1);
+		opacity: 0.8;
+	}
+}
+
+#confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+.pastel-base {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 30px;
+	background: #ff1e52;
+	border-radius: 10px 10px 5px 5px;
+}
+
+.pastel-medio {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 25px;
+	background: #ff4e8f;
+	border-radius: 8px 8px 4px 4px;
+}
+
+.pastel-top {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 6
