@@ -23,7 +23,7 @@ body{
 
 #perspectiva{
 	position:fixed;
-	top:200px;
+	top:300px;
 	left:50%;
 	margin-left: -200px;
 	perspective:1000;
@@ -143,7 +143,7 @@ body{
 
 #carta hgroup h1{
 	font-size: 1.6em;
-	color: hsla(0,0%,70%,1);
+	color: rgb(255, 0, 0);
 	text-align: center;
 	text-shadow: 0px 2px 1px hsla(0,0%,100%,1);
 }
@@ -157,20 +157,19 @@ body{
 }
 
 #carta p{
-	color: hsla(0,0%,20%,1);
-	text-shadow: 0px 1px 1px hsla(0,0%,100%,1);
-	font-size: 0.85em;
+	color: rgb(0, 0, 0);
+	text-shadow: 0px 1px 1px rgb(0, 0, 0);
+	font-size: 0.99em;
 	line-height:1.45em;
 	margin: 30px 50px 0 50px;
 }
 
 #carta p:first-letter{
 	color: hsla(0,63%,57%,1);
-	text-shadow: 0px 2px 1px hsla(0,0%,100%,1);
-	font-size: 2.5em;
+	text-shadow: 0px 1px 1px rgb(255, 0, 0);
+	font-size: 0.85em;
 	float: left;
-	line-height:1.2em;
-	padding:10px 10px 0 0;
+	line-height:1.45em;
 }
 
 .carta-imagen {
@@ -178,12 +177,11 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 10px;
 }
 
 .carta-imagen img {
-	max-width: 150px;
+	max-width: 190px;
 	border-radius: 10px;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 	transition: all 0.5s ease;
@@ -200,22 +198,23 @@ body{
 	z-index: 20;
 }
 
-/* Media queries para dispositivos móviles */
 @media (max-width: 480px) {
 	#perspectiva {
 		top: 150px;
 	}
 
 	#carta {
-		width: 85%;
+		width: 80%;
 		height: 250px;
 		margin: 0 auto;
 		left: 7.5%;
+		padding: 10px;
 	}
 	
 	#carta p {
 		margin: 10px 15px;
 		font-size: 0.75em;
+		color: black;
 	}
 	
 	.carta-imagen {
@@ -223,7 +222,7 @@ body{
 	}
 
 	.carta-imagen img {
-		max-width: 100px;
+		max-width: 200px;
 	}
 
 	.frontal h1 {
@@ -239,7 +238,7 @@ body{
 	transform: translateX(-50%);
 	width: 80px;
 	height: 30px;
-	background: #f9c5d1;
+	background: #ff1e52;
 	border-radius: 10px 10px 5px 5px;
 }
 
@@ -250,7 +249,7 @@ body{
 	transform: translateX(-50%);
 	width: 70px;
 	height: 25px;
-	background: #f2a6c2;
+	background: #ff4e8f;
 	border-radius: 8px 8px 4px 4px;
 }
 
@@ -261,7 +260,7 @@ body{
 	transform: translateX(-50%);
 	width: 60px;
 	height: 20px;
-	background: #e77fa8;
+	background: #ffbed8;
 	border-radius: 6px 6px 3px 3px;
 }
 
